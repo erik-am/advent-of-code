@@ -1,11 +1,11 @@
 {
   "name": "advent-of-code",
   "version": "1.0.0",
-  "description": "2020",
+  "description": "2020 & 2021",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/YOUR_GITHUB_USER_NAME/advent-of-code",
+  "repository": "https://github.com/erik-am/advent-of-code",
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -36,13 +36,21 @@
     "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
-    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
+    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
+    "start": "node build/main/day2021_4.js"
   },
   "engines": {
     "node": ">=10"
   },
   "dependencies": {
-    "@bitauth/libauth": "^1.17.1"
+    "@bitauth/libauth": "^1.17.1",
+    "@types/node": "^14.14.10",
+    "lodash": "^4.17.20",
+    "lodash-transpose": "^0.2.1",
+    "lodash.chunk": "^4.2.0",
+    "lodash.intersection": "^4.4.0",
+    "lodash.multipermutations": "^1.0.0",
+    "lodash.permutations": "^1.0.0"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
